@@ -40,7 +40,7 @@
         }
         
         .logo img {
-            height: 60px;
+            height: 90px; /* Vergroten van 60px naar 90px */
         }
         
         .tagline {
@@ -61,6 +61,26 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tagline-large {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: var(--darker-pink);
+            margin: 1rem 0 1.5rem;
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+        
+        .intro p {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+        
+        .cta-text {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-green);
         }
         
         h1, h2, h3 {
@@ -217,7 +237,7 @@
         }
         
         .footer-logo img {
-            height: 50px;
+            height: 70px; /* Vergroten van 50px naar 70px */
         }
         
         .disclaimer {
@@ -253,20 +273,20 @@
     </header>
     
     <div class="container">
-    <section class="intro">
-    <h1>Welcome to BlushSteps</h1>
-    <h2 class="tagline-large">Where Every Step is a Work of Art</h2>
-    <p>Step into a world of elegance and allure with BlushSteps✨</p>
-    <p>We bring you the finest foot art 👣, where delicate pastels🌸and soft blooms🌿 meet the beauty of every step.</p>
-    <p>Indulge in exclusive, feminine foot photography that celebrates the natural grace of feet, with every image telling a story of sensuality and style💖</p>
-    <p>BlushSteps isn't just about feet; it's about appreciating the art of movement, the subtle elegance of the human form, and the soft allure of spring🌸</p>
-    <p class="cta-text">Browse our samples below and get in touch to obtain the full, unblurred photos.</p>
-</section>
+        <section class="intro">
+            <h1>Welcome to BlushSteps</h1>
+            <h2 class="tagline-large">Where Every Step is a Work of Art</h2>
+            <p>Step into a world of elegance and allure with BlushSteps✨</p>
+            <p>We bring you the finest foot art 👣, where delicate pastels🌸and soft blooms🌿 meet the beauty of every step.</p>
+            <p>Indulge in exclusive, feminine foot photography that celebrates the natural grace of feet, with every image telling a story of sensuality and style💖</p>
+            <p>BlushSteps isn't just about feet; it's about appreciating the art of movement, the subtle elegance of the human form, and the soft allure of spring🌸</p>
+            <p class="cta-text">Browse our samples below and get in touch to obtain the full, unblurred photos.</p>
+        </section>
         
         <section class="gallery">
             <div class="photo-card">
                 <div class="photo-container">
-                    <img src="/api/placeholder/400/300" alt="Foot photo sample 1" class="photo">
+                    <img src="https://via.placeholder.com/400x300" alt="Foot photo sample 1" class="photo">
                     <div class="blur-overlay">
                         <p>View full photo after purchase</p>
                     </div>
@@ -280,7 +300,7 @@
             
             <div class="photo-card">
                 <div class="photo-container">
-                    <img src="/api/placeholder/400/300" alt="Foot photo sample 2" class="photo">
+                    <img src="https://via.placeholder.com/400x300" alt="Foot photo sample 2" class="photo">
                     <div class="blur-overlay">
                         <p>View full photo after purchase</p>
                     </div>
@@ -294,7 +314,7 @@
             
             <div class="photo-card">
                 <div class="photo-container">
-                    <img src="/api/placeholder/400/300" alt="Foot photo sample 3" class="photo">
+                    <img src="https://via.placeholder.com/400x300" alt="Foot photo sample 3" class="photo">
                     <div class="blur-overlay">
                         <p>View full photo after purchase</p>
                     </div>
@@ -308,7 +328,7 @@
             
             <div class="photo-card">
                 <div class="photo-container">
-                    <img src="/api/placeholder/400/300" alt="Foot photo sample 4" class="photo">
+                    <img src="https://via.placeholder.com/400x300" alt="Foot photo sample 4" class="photo">
                     <div class="blur-overlay">
                         <p>View full photo after purchase</p>
                     </div>
@@ -353,10 +373,10 @@
         <section class="contact-section" id="contact">
             <h2>Interested? Get in touch</h2>
             <p>Fill out the form and I'll get back to you as soon as possible.</p>
-            <form id="contactForm">
-                <input type="email" placeholder="Your email address *" required>
-                <input type="text" placeholder="Subject *" required>
-                <textarea placeholder="Describe which photos interest you and any questions you may have *" required></textarea>
+            <form id="contactForm" action="https://formspree.io/f/JOUW-FORMSPREE-CODE" method="POST">
+                <input type="email" name="email" placeholder="Your email address *" required>
+                <input type="text" name="subject" placeholder="Subject *" required>
+                <textarea name="message" placeholder="Describe which photos interest you and any questions you may have *" required></textarea>
                 <button type="submit">Send inquiry</button>
             </form>
         </section>
@@ -372,14 +392,5 @@
             <p>By contacting us, you confirm that you are 18 years or older.</p>
         </div>
     </footer>
-
-    <script>
-        // Simple form handler (in a real situation you would send this to a server)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! This is a demo website - in a real situation your message would be sent.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
